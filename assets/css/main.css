@@ -1,0 +1,1887 @@
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+   /* =================================================================== FUENTES
+        font-family: 'Nunito', sans-serif;
+        font-family: 'Open Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
+    ========================================================================== */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: white;
+}
+
+:root {
+    --morado-claro: #5d1d88;/*7A39F7*/
+    --gris: #FAFAFB; 
+    --morado-oscuro: #5d1d88;/*8D65F8*/
+    --gris2: #FDFCFD;
+    --amarillo: #ffb700;
+}
+
+.hola{
+color: #c6b3f8;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 100;
+    text-align: center;
+    color: black;
+}
+
+h1 {
+    font-family: 'Nunito', sans-serif;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+}
+
+p, a {
+    font-family: 'Open Sans', sans-serif;
+}
+
+bold{
+    font-weight: 900;
+}
+
+gris{
+    color: #461c50;
+}
+
+.gris {
+    color: var(--gris);
+}
+
+.morado-claro {
+    color: var(--morado-claro);
+}
+
+.morado-oscuro {
+    color: var(--morado-oscuro);
+}
+
+.amarillo {
+    color: var(--amarillo);
+}
+
+.fixed {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.btn-registro {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    display: block;
+    font-weight: bold;
+    background-color: var(--morado-claro);
+    padding: 1rem 0;
+    border-radius: 1rem;
+    transition: all .3s ease;
+}
+
+.btn-registro:hover {
+    color: var(--morado-claro);
+    background-color: white;
+}
+
+/* ===================================HEADER=======================================*/
+.site-header {
+    width: 100%;
+    margin: 0 auto;
+    height: 6.rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--gris);
+    padding: 0 1rem;
+    background-color: var(--gris);
+}
+
+.zona-1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parte-1 {
+    display: flex;
+    align-items: center;
+}
+
+.site-header h1{
+    color: black;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.menu-movil img{
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.menu-logo {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-right: 1rem;
+    margin-top: 1rem;
+}
+
+.menu-logo img{
+    width: 121px;
+    height: 43px;
+}
+
+.menu-logo a{
+    text-decoration: none;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+    .zona-1 {
+        justify-content: initial;
+    }
+
+    .menu {
+        width: 100%;
+    }
+    
+    .publicar-vacante {
+        background-color: var(--amarillo);
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+
+    .publicar-vacante i{
+        color: var(--morado-oscuro);
+    }
+}   
+
+.menu-movil {
+    width: 2.7rem;
+    padding-top: .5rem;
+    margin-right: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .menu-movil {
+        display: none;
+    }
+}
+
+.menu-movil:hover {
+    cursor: pointer;
+}
+
+.menu-movil span {
+    height: .5rem;
+    margin-bottom: 0.1rem;
+    background-color: var(--morado-oscuro);
+    display: block;
+}
+
+.navegacion {
+    display: none;
+    flex-direction: column;
+    border-top: 1px solid var(--morado-claro);
+    margin-top: .3rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .navegacion {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: start;
+    }
+}
+
+.navegacion a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+    margin-right: 1rem;
+}
+
+.navegacion a:last-of-type{
+    margin-right: 0;
+}
+
+.navegacion a:hover{
+    color: var(--morado-claro);
+}
+
+.usuarios {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin-top: .5rem;
+}
+
+.usuarios a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.u-trabajador a{
+    margin-right: 1rem;
+}
+
+.usuarios a p{
+    display: none;
+    color: black;
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.icono-usuario {
+    width: 1.5rem;
+}
+
+.icono-menu {
+    font-size: 2rem;
+    margin-right: 1rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    padding: .5rem .8rem;
+    cursor: pointer;
+}
+
+.dropdown:hover {
+    background-color: var(--rojo);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.dropdown-content a{
+    display: block;
+    padding: .5rem;
+}
+
+.dropdown-content a:hover{
+    color: var(--morado-claro);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.u-trabajador {
+    display: flex;
+}
+
+@media only screen and (min-width: 768px){
+    .navegacion a{
+        font-size: .7rem;
+    }
+
+    .usuarios {
+        justify-content: space-between;
+    }
+
+    .usuarios a p{
+        display: initial;
+    }
+
+    .icono-usuario {
+        margin-right: .5rem;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    .navegacion a{
+        font-size: .8rem;
+    }
+}
+
+.navegacion-movil {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.navegacion-movil a{
+    display: block;
+    margin-top: 1rem;
+}
+
+.navegacion-mas {
+    margin-left: 2rem;
+}
+
+.navegacion-mas a{
+    margin-bottom: .5rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .navegacion-movil {
+        display: none;
+    }
+}
+
+/* ===================================HOME=======================================*/
+.intro {
+    height: 100vh;
+    background-image: url(/img/Copia\ de\ banner.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.division {
+    height: 3rem;
+    width: 100%;
+}
+
+#mas-informacion {
+    padding-top: 6rem;
+}
+
+#nosotros {
+    padding-top: 6rem;
+}
+
+#como-funciona {
+    padding-top: 6rem;
+}
+
+#sectores {
+    padding-top: 6rem;
+}
+
+#imagen {
+    padding-top: 6rem;
+}
+
+.circulo {
+    height: 1rem;
+    width: 1rem;
+    margin: 2rem auto auto auto;
+    background-color: var(--morado-claro);
+}
+
+.contenedor h2{
+    margin: 0;
+}
+
+.texto-informal {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding-top: 6rem;
+}
+
+/* ===================================MISION Y VISION=======================================*/
+
+.vision-mision {
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 6rem;
+}
+
+@media only screen and (min-width: 925px){
+    .vision-mision {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.vision-mision h3{
+    color: white;
+}
+
+.vision-mision p{
+    color: white;
+}
+
+.vision-mision img{
+    width: 100%;
+}
+
+.mision {
+    margin-bottom: 2rem;
+    background-color: var(--morado-oscuro);
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 380px;
+    transition: .5s;
+    margin-right: 1rem;
+    flex-basis: calc(33.3333333333333%);
+}
+
+.vision {
+    margin-bottom: 2rem;
+    background-color: var(--morado-oscuro);
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 380px;
+    transition: .5s;
+    flex-basis: calc(33.3333333333333%);
+}
+
+.mantra {
+    margin-bottom: 2rem;
+    background-color: var(--morado-oscuro);
+    height: 27rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    max-width: 380px;
+    transition: .5s;
+    margin-right: 1rem;
+    flex-basis: calc(33.3333333333333%);
+}
+
+.mision:hover {
+    filter: none;
+    transform: scale(1.05);
+}
+
+.vision:hover {
+    filter: none;
+    transform: scale(1.05);
+}
+
+.mantra:hover {
+    filter: none;
+    transform: scale(1.05);
+}
+
+.texto-vym{
+    margin-bottom: 0;
+    padding: 0 1rem;
+}
+
+
+/* ===================================CLIENTES=======================================*/
+
+.clientes {
+    margin: 2rem auto 1rem auto;
+    width: 90%;
+}
+
+.especial-cliente {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.categoria {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: var(--gris);
+    border: 1px solid white;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    text-align: center;
+    height: 100%;
+}
+
+.clientes a{
+    text-decoration: none;
+}
+
+.especial-cliente a{
+    text-decoration: none;
+}
+
+.categoria h6{
+    flex-basis: 80%;
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+.categoria i{
+    flex-basis: 20%;
+}
+
+@media only screen and (min-width: 650px){
+    .clientes {
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 1rem));
+        column-gap: 1rem;
+        row-gap: 1rem;
+    }
+
+    .categoria {
+        margin-bottom: 0;
+    }
+
+    .especial-cliente {
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (min-width: 1000px){
+    .clientes {
+        display: grid;
+        grid-template-columns: repeat(3, calc(33.333333333333333% - 0.66666666666666666666666667rem));
+    }
+
+    .especial-cliente {
+        width: 33.333333333%;
+    }
+}
+
+.gris {
+    color: var(--gris);
+}
+
+.w5rem {
+    font-size: 4rem;
+}
+
+
+/*
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #121314;
+}
+
+body > ul {
+    position: absolute;
+    top: 50%;
+    width: 800px;
+    height: 200px; 
+    left: 50%;
+    margin-left: -400px;
+    margin-top: -130px;
+}*/
+
+.alianzas {
+    height: 20rem;
+}
+
+.alianzas h2{
+    margin-bottom: 0;
+}
+
+
+.alianzas ul > li {
+    width: 25%;
+    list-style-type: none;
+    position: absolute;
+    padding: 20px;
+    height: 200px; 
+    opacity: 0;
+    padding-top: 40px;
+    text-align: center;
+    transition: 1s opacity; 
+}
+
+.active {
+    opacity: 1;
+}
+
+p {
+    font-size: 13px;
+    color: var(--gris);
+    line-height: 1.5em;
+}
+
+strong { 
+color: var(--gris2);
+font-weight: 700;
+    font-size: 60px; 
+line-height: 100px; 
+}
+
+.cuadro-alianzas {
+    display: flex;
+    padding: 2rem 1rem 0 1rem;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.alianza {
+    width: 24%;
+    padding: 20px;
+    padding-top: 40px;
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.alianza img{
+    max-width: 118px;
+    filter: grayscale(1);
+}
+
+.alianza p{
+    color: black;
+}
+
+#como-funciona .contenedor {
+    text-align: center;
+}
+
+.contenedor video{
+    width: 100%;
+    max-width: 30rem;
+    margin: 0 auto 2rem auto;
+}
+
+.contenedor-como-funciona video{
+    max-width: 60rem;
+}
+
+.como-funciona {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.intro-como-funciona {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro-como-funciona p{
+    color: black;
+}
+
+.paso-empresa {
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid var(--morado-claro);
+    background-color: var(--morado-oscuro);
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.paso-empresa h4{
+    color: var(--gris);
+}
+
+.paso-empresa p{
+    width: 90%;
+    margin: 1rem auto 1rem auto;
+}
+
+.paso-empresa h4{
+    text-align: left;
+    margin: 0;
+    padding: .5rem 0 0 .5rem;
+    font-weight: bolder;
+    font-size: 2rem;
+    line-height: .8;
+}
+
+.paso-empresa:first-child {
+    margin-top: 2rem;
+}
+
+@media only screen and (min-width: 500px) {
+    .como-funciona {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        margin: 0 auto;
+    }
+
+    .paso-empresa {
+        margin-top: 2rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .como-funciona {
+        grid-template-columns: repeat(3, 33.3333333%);
+    }
+}
+
+@media only screen and (min-width: 972px) {
+    .como-funciona {
+        width: 100%;
+    }
+}
+
+.trabajos {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.trabajo {
+    border: 1px solid var(--morado-claro);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    max-width: 783px;
+    display: flex;
+    min-height: 5rem;
+    padding: 1rem;
+    align-items: center;
+    background-color: var(--gris);
+    text-decoration: none;
+}
+
+.trabajo i{
+    font-size: 2.5rem;
+}
+
+.trabajo .info {
+    margin-left: 2rem;
+    text-align: left;
+}
+
+.trabajo h4, .trabajo h5, .trabajo h6{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    color: black;
+}
+
+.trabajo h4{
+    font-size: 1.4rem;
+}
+
+.trabajo h5{
+    font-size: 1.2rem;
+}
+
+.trabajo:first-child {
+    margin-top: 2rem;
+}
+
+.info-una {
+    display: flex;
+    align-items: center;
+    margin-bottom: .2rem;
+}
+
+.info-una i{
+    font-size: 1rem;
+    margin-right: .5rem;
+}
+
+/* ===================================NOSOTROS=======================================*/
+
+.contenedor-nosotros {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 3rem 0;
+}
+
+.contenedor-nosotros video{
+    width: 100%;
+}
+
+.contenedor-nosotros p{
+    color: black;
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedor-nosotros {
+        width: 85%;
+        display: grid;
+        grid-template-columns: repeat(2, calc(50% - 1rem));
+        max-width: none;
+        align-items: center;
+        column-gap: 2rem;
+        padding: 5rem 0;
+    }
+
+    .contenedor-nosotros p{
+        font-size: 1.1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px solid var(--morado-oscuro);
+    }
+}
+
+.slogan {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan h4{
+    color: white;
+    font-weight: 700;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px var(--morado-claro);
+}
+
+.slogan h5{
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 0;
+    -webkit-text-stroke: 1px var(--morado-claro);
+}
+
+.slogan a{
+    color: white;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .slogan h5{
+        font-size: 3rem;
+    }
+}
+
+.buscar {
+    width: 315px;
+    margin: 0 auto;
+    background-color: rgba(177, 164, 220, .3);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.buscar h6{
+    text-align: left;
+    margin: 0 0 .6rem 0;
+    font-size: 1rem;
+}
+
+.buscar input{
+    opacity: .5;
+    height: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+.buscar-ubicacion {
+    margin-top: 2rem;
+}
+
+
+h1, h2, h3, h4, h5, h6{
+    font-size: +1rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+.intro-horeca {
+    background-image: url(../img/horeca.jpg);
+}
+
+.intro-textil {
+    background-image: url(../img/textil.jpg);
+}
+
+.intro-quimicos {
+    background-image: url(../img/quimicos.jpg);
+}
+
+.intro-farmaceutico {
+    background-image: url(../img/farmaceutico.jpg);
+}
+
+.intro-plasticos {
+    background-image: url(../img/plasticos.jpg);
+}
+
+.intro-inmobiliario {
+    background-image: url(../img/inmobiliaria.jpg);
+}
+
+.intro-alimentos {
+    background-image: url(../img/alimentos.jpg);
+}
+
+.contenedor-categoria {
+    background-color: var(--morado-claro);
+    margin-bottom: 1rem;
+}
+
+.titulo-categoria {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem 1rem;
+}
+
+.titulo-categoria i{
+    margin-right: 1rem;
+}
+
+.titulo-categoria h3{
+    color: var(--gris);
+}
+
+.info-categoria {
+    width: 95%;
+    margin: 0 auto;
+    margin: 2rem auto;
+}
+
+@media only screen and (min-width: 35em){
+    .info-categoria {
+        width: 580px;
+    }
+}
+
+.info-categoria p{
+    color: black;
+}
+
+
+.nuestro-equipo {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.equipo {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+}
+
+.lista-invitados {
+    padding-left: 0rem;
+}
+
+.lista-invitados li {
+    padding: 10px;
+    float: left;
+    list-style-type: none;
+    width: 100%;
+}
+
+@media only screen and (min-width: 802px) {
+    .equipo {
+        grid-template-columns: repeat(2, 378px);
+    }
+
+    .lista-invitados li {
+        width: 378px;
+    }
+}
+
+.persona {
+    position: relative;
+    overflow: hidden;
+}
+
+.persona img {
+    width: 100%;
+    filter: grayscale(1);
+    transition: filter .5s ease-in-out;
+    transition: transform 1s ease-in-out;
+}
+
+.persona:hover img {
+    filter: unset;
+    transform: scale(1.1);
+}
+
+.persona p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 15px 10px;
+    margin: 0;
+    background-color: var(--gris);
+    width: 100%;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    color: var(--morado-claro);
+    text-transform: uppercase;
+    transition: all .5s ease-in-out;
+}
+
+.persona:hover p {
+    bottom: -80px;
+    opacity: 0;
+}
+
+.persona h6 {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    padding: 15px 10px;
+    margin: 0;
+    background-color: var(--gris);
+    width: 100%;
+    text-align: left;
+    font-family: 'Oswald', sans-serif;
+    color: var(--morado-claro);
+    transition: all .5s ease-in-out;
+    opacity: 0;
+    font-size: .8rem;
+}
+
+.persona:hover h6 {
+    bottom: 0px;
+    opacity: 1;
+}
+
+/* =====================================IMAGEN PERFIL=================================*/
+.contenedor{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contenido-imagen {
+    background-color: var(--gris);
+    padding: 2rem 1rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contenido-imagen h2{
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .contenedor-imagen{
+        display: grid;
+        grid-template-columns: 1Fr 1Fr 1Fr;
+        gap: 1rem;
+    }
+
+    .contenido-imagen P{
+        margin-bottom: 0;
+    }
+}
+
+.contenedor-imagen p{
+    color: black;
+    text-align: justify;
+}
+
+.imagenes-perfil {
+    text-align: center;
+}
+
+.imagenes-perfil img{
+    height: 20rem;
+    width: 20rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+    .imagenes-perfil {
+        display: flex;
+    }
+
+    .buena {
+        width: 50%;
+    }
+
+    .mala {
+        width: 50%;
+    }
+}
+
+/* =====================================BLOG HOME =================================*/
+
+.entrada-blogs {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto 0 auto;
+}
+
+.entrada-blog {
+    background-color: var(--morado-oscuro);
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+
+.entrada-blog h3 {
+    text-transform: uppercase;
+    text-align: left;
+    color: white;
+}
+
+.entrada-blog p{
+    text-align: justify;
+}
+
+.boton-entrada-blog {
+    width: 10rem;
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--gris);
+    margin: 2rem auto 0 auto;
+    border-radius: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .boton-entrada-blog {
+        padding: 1rem 2rem;
+        margin: 2rem 0 0 auto;
+    }
+}
+
+.boton-entrada-blog a{
+    text-decoration: none;
+    color: var(--morado-oscuro);
+}
+
+.blog {
+    width: 90%;
+    max-width: 630px;
+    margin: 4rem auto;
+}
+
+.blog h3{
+    text-transform: uppercase;
+    color: var(--morado-claro);
+}
+
+.blog p{
+    color: black;
+    text-align: justify;
+}
+
+/* =====================================NOSOTROS=================================*/
+
+.nosotros {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosotros li{
+    width: 388px;
+}
+
+.info-persona {
+    width: 100%;
+}
+
+.info-persona p{
+    color: black;
+    text-align: justify;
+    border-bottom: 1px solid var(--morado-claro);
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+    .nosotros li{
+        width: min(625px, 90%);
+        display: flex;
+        align-items: center;
+    }
+
+    .nosotros .persona {
+        flex-basis: 90%;
+        margin-right: 1rem;
+    }
+
+    .nosotros .info-persona p{
+        padding-top: 0;
+        padding-bottom: 0vh;
+    }
+}
+
+
+
+
+.contenedor-slider {
+    margin-top: 2rem;
+    background-color: var(--gris);
+    padding: 5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+   }
+    100% {
+        transform: translateX(calc(-100px * 7));
+   }
+}
+.slider {
+    background: white;
+    box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+    height: 100px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+}
+.slider::before, .slider::after {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+}
+.slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+.slider::before {
+    left: 0;
+    top: 0;
+}
+.slider .slide-track {
+    animation: scroll 30s linear infinite;
+    display: flex;
+    width: calc(250px * 14);
+}
+.slider .slide {
+    height: 100px;
+    width: 250px;
+}
+
+.slide img {
+    padding: 10px 0;
+    max-width: 250px;
+}
+
+/* =====================================FOOTER=================================*/
+
+footer {
+    background-color: var(--gris);
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+footer img{
+    width: 10rem;
+    height: 90.96px;
+}
+
+.form-contacto {
+    margin: 4rem auto;
+    max-width: 510px;
+}
+
+.form-contacto h3{
+    color: var(--morado-claro);
+}
+
+.form-contacto .campo {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.form-contacto .campo label{
+    color: var(--morado-claro);
+    width: 4rem;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.form-contacto .campo input{
+    width: 100%;
+    max-width: 430px;
+}
+
+.form-contacto .campo textarea{
+    max-width: 430px;
+}
+
+.form-contacto button{
+    border-radius: 2rem;
+    width: 8rem;
+    height: 2.5rem;
+    color: var(--morado-claro);
+}
+
+.form-contacto button:hover {
+    cursor: pointer;
+}
+
+.footer-contacto {
+    margin-top: 2rem;
+}
+
+.footer-contacto i{
+    color: var(--morado-claro);
+}
+
+footer .redes {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+footer .redes a:first-child{
+    margin-right: 1rem;
+}
+
+footer .redes i{
+    color: var(--morado-claro);
+    font-size: 2rem;
+}
+
+@media only screen and (min-width: 1140px) {
+    .principal-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .form-contacto {
+        margin: 0 2rem;
+    }
+}
+
+.contenedor-blog {
+    margin-top: 2rem;
+}
+
+.politicas {
+    margin-top: 3rem;
+}
+
+.politicas a{
+    text-decoration: none;
+    color: var(--morado-claro);
+}
+
+.politicas a:hover{
+    color: var(--amarillo);
+}
+
+/* =====================================REGISTRO CLIENTES=================================*/
+
+.form-registro {
+    width: 95%;
+    margin: 5rem auto;
+    text-align: center;
+    max-width: none;
+}
+
+.form-registro img{
+    width: 50rem;
+}
+
+.form-registro h1{
+    color: var(--morado-claro);
+    font-weight: bolder;
+    margin-bottom: 3rem;
+}
+
+.form-registro h3{
+    margin-bottom: 3rem;
+}
+
+.form-registro button{
+    margin: 0 auto;
+}
+
+.campo-registro {
+    margin: 0 auto;
+}
+
+.campo-registro label{
+    width: 8rem !important;
+}
+
+.campo-tipo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 3rem 0;
+}
+
+@media only screen and (min-width: 901px) {
+    .campo-tipo {
+        flex-direction: row;
+    }
+}
+
+.tipo-plan {
+    border: 1px solid var(--morado-claro);
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 100%;
+    margin: 0 .5rem 2rem .5rem;
+    color: var(--gris);
+}
+
+.tipo-plan h6{
+    margin: 0;
+    text-align: left;
+}
+
+.tipo-plan h5{
+    text-align: left;
+    font-size: .8rem;
+    margin: 0;
+}
+
+.tipo-plan h4{
+    font-size: 2rem;
+    margin: 1rem 0 0 0;
+    color: var(--morado-claro);
+    font-weight: bold;
+}
+
+.tipo-plan h3{
+    margin: 0;
+    color: black;
+}
+
+.tipo-plan h1{
+    color: black;
+}
+
+.tipo-plan p{
+    color: black;
+    margin-top: 3.1rem;
+    margin-bottom: 0;
+}
+
+.tipo-plan a{
+    text-decoration: none;
+    background-color: var(--morado-claro);
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.form-registro a{
+    text-decoration: none;
+    background-color: var(--morado-claro);
+    padding: 1rem 4rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.tipo-plan-gratis a{
+    padding: 1rem 2rem;
+}
+
+.form-landing {
+    margin-top: 0rem;
+    background-image: url(../img/fondo\ landing.png);
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.form-landing h1{
+    font-size: 2rem;
+}
+
+.form-landing h3{
+    font-size: 1.5rem;
+}
+
+.form-landing h6{
+    color: var(--morado-claro);
+    margin-bottom: 6rem;
+    font-weight: bold;
+}
+
+.form-landing p{
+    color: black;
+    font-size: 1.4rem;
+    margin-bottom: 5rem;
+}
+
+
+.btn-whatsapp img{
+    width: 64px;
+}
+
+.btn-whatsapp {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    align-items: center;
+}
+
+.btn-whatsapp h6{
+    margin-right: 1rem;
+    font-size: 1rem;
+}
+
+.empodera {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.empodera .info {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.empodera img{
+    width: 80%;
+    max-width: 500px;
+}
+
+.empodera h3{
+    font-weight: bold;
+}
+
+.empodera p{
+    color: black;
+}
+
+@media only screen and (min-width: 769px) {
+    .empodera .info {
+        flex-direction: row;
+        padding: 1rem 0;
+    }
+}
+
+
+/*====================================== FORMULARIO WEBINAR ======================================*/
+.form {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.form h2{
+    max-width: 750px;
+    margin: 4rem auto;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+    .form h2{
+        font-size: 1.5rem;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+
+.sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+}
+
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+}
+
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

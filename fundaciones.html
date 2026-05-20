@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <title>YoSoy - Fundaciones Aliadas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <link href="assets/css/styleS3.css" rel="stylesheet">
+  <link href="assets/css/custom-styles.css" rel="stylesheet">
+  <link href="assets/css/navbar-v2.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="assets/images/ico.png" type="image/x-icon"/>
+  <script src="https://kit.fontawesome.com/0922791bba.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+  
+  <script>
+    // Native Multi-language Redirect
+    (function() {
+      const savedLang = localStorage.getItem('selectedLanguage');
+      if (savedLang === 'en' && !window.location.pathname.includes('/en/')) {
+        const currentFile = window.location.pathname.split('/').pop() || 'fundaciones.html';
+        window.location.href = 'en/' + currentFile;
+      }
+    })();
+  </script>
+  <style>        /* PREMIUM FOOTER STYLES */
+    .premium-footer {
+      background: linear-gradient(135deg, #1a3c42 0%, #244b52 100%);
+      color: #e0f2f1;
+      padding: 50px 0 20px;
+      position: relative;
+      overflow: hidden;
+    }
+    .premium-footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 15% 50%, rgba(231, 135, 218, 0.05) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .footer-col-title {
+      color: #e787da;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 30px;
+      position: relative;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer-col-title::after {
+      content: '';
+      position: absolute;
+      left: 0; bottom: -10px;
+      width: 30px; height: 3px;
+      background: #e787da;
+      border-radius: 2px;
+    }
+    .footer-link-v3 {
+      color: rgba(224, 242, 241, 0.8);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 15px;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+    .footer-link-v3:hover {
+      color: #e787da;
+      transform: translateX(8px);
+    }
+    .social-circle {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 12px;
+      color: white;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      text-decoration: none !important;
+    }
+    .social-circle:hover {
+      background: #e787da;
+      border-color: #e787da;
+      transform: translateY(-5px) scale(1.1);
+      color: white;
+      box-shadow: 0 10px 20px rgba(231, 135, 218, 0.3);
+    }
+    .footer-bottom-v3 {
+      margin-top: 35px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      font-size: 0.9rem;
+      color: rgba(224, 242, 241, 0.5);
+    }
+
+    /* Garantizar que NO haya scroll horizontal jamás */
+    html, body {
+      max-width: 100% !important;
+      overflow-x: hidden !important;
+      position: relative;
+    }
+
+
+
+    
+
+    /* --- PREMIUM LANGUAGE SWITCHER --- */
+    .language-switcher-v3 {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      z-index: 10000;
+    }
+    .lang-selector-premium {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      border: 2px solid #e787da; /* Borde más notorio */
+      padding: 8px 15px;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .lang-selector-premium:hover {
+      transform: scale(1.05) translateY(-5px);
+      background: #fff;
+      box-shadow: 0 15px 35px rgba(231, 135, 218, 0.4);
+    }
+    .lang-option-v2 {
+      background: none;
+      border: none;
+      color: #2F484E;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      padding: 5px;
+      transition: color 0.3s ease;
+    }
+    .lang-option-v2:hover {
+      color: #e787da;
+    }
+    .lang-divider {
+      color: rgba(0,0,0,0.1);
+      font-size: 0.8rem;
+    }
+    
+    /* Ocultar elementos feos de Google */
+    .goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon { display: none !important; }
+    body { top: 0px !important; }
+    .goog-te-gadget-simple {
+      background-color: transparent !important;
+      border: none !important;
+      font-size: 0 !important;
+    }
+    #google_translate_element {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* PREMIUM ALLIANCES STYLES */
+    .contact-page-banner {
+      position: relative;
+      padding: 80px 0 60px;
+      background: linear-gradient(135deg, rgba(26, 60, 66, 0.7) 0%, rgba(36, 75, 82, 0.7) 100%), url('assets/index/Fondo.png') no-repeat center center / cover;
+      min-height: 22vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .partner-card-v2 {
+      background: rgba(255, 255, 255, 0.98);
+      border-radius: 15px;
+      padding: 20px;
+      height: 100%;
+      border: 1px solid rgba(46, 117, 124, 0.25);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+      backdrop-filter: blur(10px);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .partner-card-v2:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 30px rgba(46, 117, 124, 0.15);
+      border-color: rgba(46, 117, 124, 0.7);
+    }
+
+    .partner-logo-v2 {
+      width: 60px;
+      height: 60px;
+      background: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      flex-shrink: 0;
+    }
+
+    .partner-logo-v2 img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .partner-card-v2 h4 a {
+      color: #2F484E;
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .partner-card-v2 h4 a:hover {
+      color: #2E757C;
+    }
+
+    .location-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #aaa;
+      letter-spacing: 0.5px;
+    }
+
+    .description-text {
+      color: #777;
+      line-height: 1.5;
+      font-size: 0.88rem;
+      margin-top: 10px;
+    }
+
+    .btn-visit {
+      color: #e787da;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-visit:hover {
+      color: #2E757C;
+      transform: translateX(3px);
+    }
+
+  </style>
+    
+</head>
+
+<body>
+
+  <div class="page-wrapper">
+
+    <!-- Main Header-->
+      <header class="header-v2 header-border" id="main-header" style="z-index: 9999 !important;">
+        <div class="header-inner-v2">
+          <div class="header-top-v2">
+            <a href="index.html" class="logo-v2">
+              <img src="assets/images/logo.png" alt="YoSoy Logo" />
+            </a>
+            
+            <button class="mobile-toggler-v2" id="mobile-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+          <nav class="d-none d-lg-block">
+            <ul class="nav-links-v2">
+              <li><a href="index.html" class="nav-link-v2">Inicio</a></li>
+              <li><a href="fundaciones.html" class="nav-link-v2 active">Fundaciones</a></li>
+              <li><a href="primer-entrenamiento-mujeres.html" class="nav-link-v2">Entrenamientos</a></li>
+              <li><a href="nosotros.html" class="nav-link-v2">Nosotros</a></li>
+              <li><a href="contacto.html" class="nav-link-v2">Contacto</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-btns-v2 d-none d-lg-flex">
+            <a href="https://app.yo-soy.co/login" class="btn-v2 btn-v2-outline">Iniciar Sesión</a>
+            <a href="https://app.yo-soy.co/registro/tecnico" class="btn-v2 btn-v2-solid">Registrarse</a>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div id="mobile-links" class="mobile-menu-v2 d-lg-none">
+            <ul class="nav-links-v2 flex-column w-100">
+              <li><a href="index.html" class="nav-link-v2">Inicio</a></li>
+              <li><a href="fundaciones.html" class="nav-link-v2 active">Fundaciones</a></li>
+              <li><a href="primer-entrenamiento-mujeres.html" class="nav-link-v2">Entrenamientos</a></li>
+              <li><a href="nosotros.html" class="nav-link-v2">Nosotros</a></li>
+              <li><a href="contacto.html" class="nav-link-v2">Contacto</a></li>
+              <li class="mt-3"><a href="https://app.yo-soy.co/login" class="btn-v2 btn-v2-outline w-100 mb-2">Iniciar Sesión</a></li>
+              <li><a href="https://app.yo-soy.co/registro/tecnico" class="btn-v2 btn-v2-solid w-100">Registrarse</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+    <!--End Main Header -->
+
+    
+    <!--End Page Title-->
+
+    <!-- Immersive Banner Section -->
+    <section class="contact-page-banner">
+      <div class="auto-container">
+        <div class="text-center mb-5">
+
+          <p style="font-size: 1.15rem; color: rgba(255,255,255,0.95); max-width: 850px; margin: 0 auto; font-weight: 500; text-shadow: 0 2px 10px rgba(0,0,0,0.2); line-height: 1.6;">
+            Nuestra meta es lograr tejer conexiones entre mujeres en situaciones de vulnerabilidad y la oportunidad de acceder al servicio de salud gineco-obstétrica especializada. Para alcanzar ese sueño, hemos buscado alianzas con distintas fundaciones y sectores que cuentan con gran diversidad de grupos de mujeres que requieren la atención especializada.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Grid Section -->
+    <section class="pb-5" style="margin-top: -80px; position: relative; z-index: 10;">
+      <div class="auto-container">
+        <div class="row g-4">
+          
+          <!-- Alliance Card: Acción Interna -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/logo-fundacion-accion-interna.png" alt="Acción Interna">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://fundacionaccioninterna.org/" target="_blank">Acción Interna</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Dignificar y mejorar la calidad de vida de la población carcelaria y pospenada.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://fundacionaccioninterna.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: AR. Solidaridad -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/FUNDACIÓN SOLIDARIDAD.gif" alt="AR Solidaridad">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://arfundacion.org/" target="_blank">AR. Solidaridad</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Iniciativas para mejorar la calidad de vida de la población vulnerable en Bogotá.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://arfundacion.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Casa Karah -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/LOGO CASA KARAH.jpg" alt="Casa Karah">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://fundacionpoderjoven.org/" target="_blank">Casa Karah</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Medellín</span>
+                </div>
+              </div>
+              <p class="description-text">Trabaja por los niños en situación vulnerable en diversos sectores de Medellín.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://fundacionpoderjoven.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Centro MYA -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/logo MYA mejorado.png" alt="Centro MYA">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://centromya.org/" target="_blank">Centro MYA</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Apoyo a madres y amigos de niños y jóvenes con retos especiales en Colombia.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://centromya.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: CIREC -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/CIREC - LOGO COLOR - NEGRO - VERTICAL.png" alt="CIREC">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="http://fundacioncirec.org/" target="_blank">CIREC</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Rehabilitación integral de personas con discapacidad física de forma humana.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="http://fundacioncirec.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Fundación Fe -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/LOGO FE pos copia.jpg" alt="Fundación Fe">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://www.fundacionfe.org/" target="_blank">Fundación Fe</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Inclusión social de la población con discapacidad cognitiva y sus familias.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://www.fundacionfe.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Fundación Huellas -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/Logo Fundación Huellas.png" alt="Fundación Huellas">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://huellasfundacion.org/" target="_blank">Huellas</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Medellín</span>
+                </div>
+              </div>
+              <p class="description-text">Procesos de inclusión social y capacitación informal desde valores.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://huellasfundacion.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Laudes Infantis -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/LOGO LAUDES.png" alt="Laudes Infantis">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://laudesinfantis.org/" target="_blank">Laudes Infantis</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Dedicada a mejorar la vida de niños vulnerables mediante educación.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://laudesinfantis.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Levantate y Anda -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/Logo Fundación  J.jpg" alt="Levantate y Anda">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://www.fundacionlevantateyanda.org/" target="_blank">Levantate y Anda</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Objetivo de ayudar a niños y jóvenes en riesgo a desarrollar su potencial.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://www.fundacionlevantateyanda.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Proyecto de Vida -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/Logo FPV-02.png" alt="Proyecto de Vida">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://proyectodevida.org/" target="_blank">Proyecto de Vida</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Construcción de proyectos de vida para niños y jóvenes vulnerables.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://proyectodevida.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Sisma Mujer -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/Logo Sisma.png" alt="Sisma Mujer">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://sismamujer.org/" target="_blank">Sisma Mujer</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Consolidación del movimiento de mujeres víctimas de violencia.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://sismamujer.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Soy Oportunidad -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/LOGO SOY OPORTUNIDAD FUNDACIÓN NUEVO.png" alt="Soy Oportunidad">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://fundacionsoyoportunidad.org/" target="_blank">Soy Oportunidad</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Misión de ofrecer oportunidades productivas para madres cabeza de hogar.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://fundacionsoyoportunidad.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Alliance Card: Tiempo de Juego -->
+          <div class="col-lg-4 col-md-6">
+            <div class="partner-card-v2">
+              <div class="d-flex align-items-center mb-4">
+                <div class="partner-logo-v2">
+                  <img src="assets/images/home/aliados/Tiempo de Juego sin fondo.png" alt="Tiempo de Juego">
+                </div>
+                <div class="ms-3">
+                  <h4 class="mb-1"><a href="https://tiempodejuego.org/" target="_blank">Tiempo de Juego</a></h4>
+                  <span class="location-tag"><i class="fas fa-map-marker-alt me-1"></i> Bogotá</span>
+                </div>
+              </div>
+              <p class="description-text">Juego como herramienta de transformación para menores y comunidades.</p>
+              <div class="mt-4 border-top pt-3 text-end">
+                <a href="https://tiempodejuego.org/" target="_blank" class="btn-visit">Visitar <i class="fas fa-external-link-alt ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!--End Listing Page Section -->
+
+      <footer class="premium-footer">
+        <div class="auto-container">
+          <div class="row align-items-center">
+            <!-- Columna 1: Marca y Descripción -->
+            <div class="col-lg-7 col-md-6 mb-4 mb-md-0">
+              <div class="footer-logo mb-3">
+                <img src="assets/images/logo.png" alt="YoSoy Logo" style="max-height: 38px; filter: brightness(0) invert(1);" />
+              </div>
+              <p style="line-height: 1.7; color: rgba(224, 242, 241, 0.8); margin-bottom: 0; font-size: 1.05rem; max-width: 550px;">
+                Acompañamos en bajar los índices de cáncer de seno y cuello uterino en poblaciones vulnerables en Colombia y próximamente Latam, a través de la prevención, telemedicina y el acceso a la educación en salud femenina.
+              </p>
+            </div>
+            
+            <!-- Columna 2: Redes Sociales y Contacto -->
+            <div class="col-lg-5 col-md-6 text-md-end">
+              <div class="footer-socials mb-3">
+                <a href="https://wa.me/573106433823" class="social-circle" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/yosoy.ml/" class="social-circle" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/yosoyml/" class="social-circle" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@yosoy.co" class="social-circle" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/yo.soy.oportunidades" class="social-circle" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </div>
+              <div style="font-size: 0.95rem; color: rgba(224, 242, 241, 0.6);">
+                <div class="mb-1"><i class="fas fa-envelope me-2" style="color: #e787da;"></i> salud.femenina@yo-soy.co</div>
+                <div class="mb-1"><i class="fas fa-phone me-2" style="color: #e787da;"></i> +57 310 6433823</div>
+                <div><i class="fas fa-map-marker-alt me-2" style="color: #e787da;"></i> Bogotá, Colombia</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="footer-bottom-v3 text-center">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <p class="mb-0">© 2026 <span style="color: #e787da; font-weight: 700;">Yo Soy</span>. Todos los derechos reservados. | Rompiendo tabúes y sanando mentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <!-- End Main Footer -->
+
+  </div><!-- End Page Wrapper -->
+  
+  <!-- Scripts -->
+  <!-- Floating Language Switcher -->
+  <div class="language-switcher-v3">
+    <div class="lang-selector-premium">
+      <button class="lang-option-v2" onclick="changeLang('es')">ES</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-option-v2" onclick="changeLang('en')">EN</button>
+    </div>
+  </div>
+
+  
+  
+
+  <!-- Scripts -->
+  <script src="assets/js/jquery.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <script src="assets/js/script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const header = document.getElementById("main-header");
+      const navLinks = document.querySelectorAll(".nav-link-v2");
+
+      // Header scroll effect
+      function handleScroll() {
+        if (!header) return;
+        if (window.scrollY > 50) {
+          header.classList.add("scrolled");
+        } else {
+          header.classList.remove("scrolled");
+        }
+      }
+
+      window.addEventListener("scroll", handleScroll);
+      if (header) handleScroll();
+
+
+    });
+
+    // --- LANGUAGE SWITCHER UI LOGIC ---
+    function changeLang(langCode) {
+      localStorage.setItem('selectedLanguage', langCode);
+      const currentFile = window.location.pathname.split('/').pop() || 'fundaciones.html';
+      if (langCode === 'en') {
+        window.location.href = 'en/' + currentFile;
+      } else {
+        console.log("Ya estás en el idioma español.");
+      }
+    }
+  </script>
+
+  <!-- ElevenLabs Bot Integration -->
+  <!-- <elevenlabs-convai agent-id="roQLeN1qG3aFq9ZpWnfK"></elevenlabs-convai>
+  <script src="https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script> -->
+
+</body>
+
+</html>

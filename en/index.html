@@ -1,0 +1,1227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>YoSoy - Rompiendo tabúes y sanando mentes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="../assets/css/styleS3.css" rel="stylesheet">
+    <link href="../assets/css/custom-styles.css" rel="stylesheet">
+    <link href="../assets/css/navbar-v2.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/images/ico.png" type="image/x-icon"/>
+    <script src="https://kit.fontawesome.com/0922791bba.js" crossorigin="anonymous" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" defer></script>
+    
+    <script>
+      // Native Multi-language Redirect
+      (function() {
+        const savedLang = localStorage.getItem('selectedLanguage');
+        if (savedLang === 'es') {
+          window.location.href = '../index.html';
+        }
+      })();
+    </script>
+    
+    <style>        /* PREMIUM FOOTER STYLES */
+        .premium-footer {
+          background: linear-gradient(135deg, #1a3c42 0%, #244b52 100%);
+          color: #e0f2f1;
+          padding: 50px 0 20px;
+          position: relative;
+          overflow: hidden;
+        }
+        .premium-footer::before {
+          content: '';
+          position: absolute;
+          top: 0; left: 0; right: 0; bottom: 0;
+          background: radial-gradient(circle at 15% 50%, rgba(231, 135, 218, 0.05) 0%, transparent 40%);
+          pointer-events: none;
+        }
+        .footer-col-title {
+          color: #e787da;
+          font-size: 1.2rem;
+          font-weight: 800;
+          margin-bottom: 30px;
+          position: relative;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+        .footer-col-title::after {
+          content: '';
+          position: absolute;
+          left: 0; bottom: -10px;
+          width: 30px; height: 3px;
+          background: #e787da;
+          border-radius: 2px;
+        }
+        .footer-link-v3 {
+          color: rgba(224, 242, 241, 0.8);
+          text-decoration: none;
+          display: block;
+          margin-bottom: 15px;
+          transition: all 0.3s ease;
+          font-weight: 500;
+        }
+        .footer-link-v3:hover {
+          color: #e787da;
+          transform: translateX(8px);
+        }
+        .social-circle {
+          width: 38px;
+          height: 38px;
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 12px;
+          color: white;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+          text-decoration: none !important;
+        }
+        .social-circle:hover {
+          background: #e787da;
+          border-color: #e787da;
+          transform: translateY(-5px) scale(1.1);
+          color: white;
+          box-shadow: 0 10px 20px rgba(231, 135, 218, 0.3);
+        }
+        .footer-newsletter-box {
+          background: rgba(255, 255, 255, 0.03);
+          padding: 25px;
+          border-radius: 20px;
+          border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .newsletter-input-v3 {
+          background: rgba(255, 255, 255, 0.05);
+          border: 1px solid rgba(255, 255, 255, 0.1);
+          border-radius: 12px;
+          color: white;
+          padding: 12px 20px;
+          margin-bottom: 12px;
+        }
+        .newsletter-input-v3:focus {
+          background: rgba(255, 255, 255, 0.08);
+          border-color: #e787da;
+          color: white;
+          box-shadow: none;
+        }
+        .footer-bottom-v3 {
+          margin-top: 35px;
+          padding-top: 20px;
+          border-top: 1px solid rgba(255, 255, 255, 0.05);
+          font-size: 0.9rem;
+          color: rgba(224, 242, 241, 0.5);
+        }
+
+        /* Responsive card image wrapper for Premios section */
+        .card-image-wrapper { width: 100%; height: 200px; overflow: hidden; border-radius: 0.75rem; background: #f8f9fa; display: flex; align-items: center; justify-content: center; padding: 8px; }
+        .card-image-wrapper img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+        @media (max-width: 767.98px) {
+          .card-image-wrapper { height: 160px; }
+        }
+        @media (max-width: 767.98px) {
+          .main-footer .row.g-4 > div { margin-bottom: 2rem; }
+          .img-cruz { 
+            padding-left: 25%;
+            padding-top: 40px; }
+          .logo-img {
+            padding-left: 15%;
+          }
+        }
+        
+        /* Garantizar que NO haya scroll horizontal jamás */
+        html, body {
+          max-width: 100% !important;
+          overflow-x: hidden !important;
+          position: relative;
+        }
+ 
+        html.lenis, html.lenis body {
+          height: auto;
+        }
+
+        .lenis.lenis-smooth {
+          scroll-behavior: auto !important;
+        }
+
+        .lenis.lenis-stopped {
+          overflow: hidden;
+        }
+
+        
+
+        /* --- PREMIUM LANGUAGE SWITCHER --- */
+        .language-switcher-v3 {
+          position: fixed;
+          bottom: 30px;
+          left: 30px;
+          z-index: 10000;
+        }
+        .lang-selector-premium {
+          background: rgba(255, 255, 255, 0.9);
+          backdrop-filter: blur(10px);
+          border: 2px solid #e787da; /* Borde más notorio */
+          padding: 8px 15px;
+          border-radius: 50px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .lang-selector-premium:hover {
+          transform: scale(1.05) translateY(-5px);
+          background: #fff;
+          box-shadow: 0 15px 35px rgba(231, 135, 218, 0.4);
+        }
+        .lang-option-v2 {
+          background: none;
+          border: none;
+          color: #2F484E;
+          font-weight: 800;
+          font-size: 0.85rem;
+          cursor: pointer;
+          padding: 5px;
+          transition: color 0.3s ease;
+        }
+        .lang-option-v2:hover {
+          color: #e787da;
+        }
+        .lang-divider {
+          color: rgba(0,0,0,0.1);
+          font-size: 0.8rem;
+        }
+
+        /* RESPONSIVE FIX FOR PINNED SCROLL EFFECTS */
+        @media (max-width: 991px) {
+          #anim-scroll-container, #extra-scroll-container {
+            height: auto !important;
+            position: relative !important;
+            overflow: visible !important;
+            display: block !important;
+          }
+          
+          #anim-sticky-inner, #extra-sticky-inner {
+            position: relative !important;
+            height: auto !important;
+            top: auto !important;
+            left: auto !important;
+            transform: none !important;
+            overflow: visible !important;
+            background: transparent !important;
+            display: block !important;
+          }
+          
+          #anim-section-1, #anim-section-2,
+          #extra-sec-1, #extra-sec-2, #extra-sec-3, #extra-sec-4 {
+            position: relative !important;
+            opacity: 1 !important;
+            transform: none !important;
+            visibility: visible !important;
+            pointer-events: auto !important;
+            top: auto !important;
+            bottom: auto !important;
+            left: auto !important;
+            display: block !important;
+            padding: 60px 0 !important;
+            min-height: auto !important;
+            z-index: 1 !important;
+          }
+
+          /* Alternar fondos sutiles para diferenciar secciones en móvil */
+          #anim-section-2, #extra-sec-2, #extra-sec-4 {
+            background-color: #fcfcfc !important;
+          }
+          
+          /* Ajustar carrusel de premios en móvil */
+          .premios-carousel-control {
+            display: none !important; /* Usar touch/swipe en móvil */
+          }
+
+
+        }
+    </style>
+    
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      
+      <!-- New Modern Header (V2) -->
+      <header class="header-v2" id="main-header" style="z-index: 9999 !important;">
+        <div class="header-inner-v2">
+          <div class="header-top-v2">
+            <a href="index.html" class="logo-v2">
+              <img src="../assets/images/logo.png" alt="YoSoy Logo" />
+            </a>
+            
+            <button class="mobile-toggler-v2" id="mobile-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+
+          <nav class="d-none d-lg-block">
+            <ul class="nav-links-v2">
+              <li><a href="index.html" class="nav-link-v2 active">Home</a></li>
+              <li><a href="fundaciones.html" class="nav-link-v2">Foundations</a></li>
+              <li><a href="primer-entrenamiento-mujeres.html" class="nav-link-v2">Training</a></li>
+              <li><a href="nosotros.html" class="nav-link-v2">About Us</a></li>
+              <li><a href="contacto.html" class="nav-link-v2">Contact</a></li>
+            </ul>
+          </nav>
+
+          <div class="auth-btns-v2 d-none d-lg-flex">
+            <a href="https://app.yo-soy.co/login" class="btn-v2 btn-v2-outline">Login</a>
+            <a href="https://app.yo-soy.co/registro/mujer" class="btn-v2 btn-v2-solid">Register</a>
+          </div>
+
+          <!-- Mobile Menu -->
+          <div id="mobile-links" class="mobile-menu-v2 d-lg-none">
+            <ul class="nav-links-v2 flex-column w-100">
+              <li><a href="index.html" class="nav-link-v2 active">Home</a></li>
+              <li><a href="fundaciones.html" class="nav-link-v2">Foundations</a></li>
+              <li><a href="primer-entrenamiento-mujeres.html" class="nav-link-v2">Training</a></li>
+              <li><a href="nosotros.html" class="nav-link-v2">About Us</a></li>
+              <li><a href="contacto.html" class="nav-link-v2">Contact</a></li>
+              <li class="mt-3"><a href="https://app.yo-soy.co/login" class="btn-v2 btn-v2-outline w-100 mb-2">Login</a></li>
+              <li><a href="https://app.yo-soy.co/registro/mujer" class="btn-v2 btn-v2-solid w-100">Register</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- Spacer for fixed header -->
+      <div></div>
+
+      <!-- Banner similar to image (Female Health) -->
+      <section style="background-color: #e787da; padding: 100px 0; position: relative; overflow: hidden; margin-top: 40px;">
+        <div class="container">
+          <div class="row align-items-center">
+            <!-- Left Text -->
+            <div class="col-lg-6 mb-5 mb-lg-0" style="position: relative; z-index: 2;">
+              <h2 style="color: #ffffff; font-size: 2.2rem; font-weight: 800; line-height: 1.3; margin-bottom: 25px;">
+                The connection between stories and<br>opportunities for female<br>health!
+              </h2>
+              <h4 style="color: #2F484E; font-size: 1.4rem; font-weight: 800; margin-bottom: 15px;">
+                Breaking Taboos, Healing Minds.
+              </h4>
+              <p style="color: #2F484E; font-size: 1.05rem; line-height: 1.6; margin-bottom: 30px;">
+                Breast and uterine cancer remains a devastating threat to millions of women, especially in vulnerable communities, where the lack of access to information, and cultural taboos, limit prevention and early detection. This results in late diagnoses and a high human cost.
+              </p>
+              <div style="width: 100%; height: 2px; background-color: rgba(255,255,255,0.6);"></div>
+            </div>
+            
+            <!-- Right Cards -->
+            <div class="col-lg-6 hero-cards-wrapper" style="position: relative; z-index: 2; min-height: 450px;">
+              <style>
+                @media (max-width: 991px) {
+                  .hero-cards-wrapper {
+                    min-height: 380px !important;
+                    margin-top: 30px;
+                  }
+                  .organic-bg {
+                    width: 70% !important;
+                    height: 70% !important;
+                    top: 15% !important;
+                    left: 15% !important;
+                  }
+                  .hero-main-img {
+                    max-width: 100% !important;
+                    max-height: 100% !important;
+                  }
+                  .floating-card {
+                    padding: 10px 15px !important;
+                    scale: 0.85;
+                  }
+                  .card-1 { top: -10px !important; right: -10px !important; }
+                  .card-2 { top: 90px !important; left: -10px !important; }
+                  .card-3 { 
+                    bottom: 0px !important; 
+                    right: -10px !important; 
+                    width: 260px !important;
+                    padding: 15px !important;
+                  }
+                }
+                @media (max-width: 575px) {
+                  .hero-cards-wrapper { min-height: 320px !important; }
+                  .floating-card { scale: 0.75; }
+                  .card-1 { top: -20px !important; right: -20px !important; }
+                  .card-2 { top: 60px !important; left: -25px !important; }
+                  .card-3 { bottom: -20px !important; right: -20px !important; width: 220px !important; }
+                }
+              </style>
+              
+              <!-- Hero image without background shape -->
+              <div class="organic-bg" style="position: absolute; top: 5%; left: 5%; width: 90%; height: 90%; z-index: 1; display: flex; align-items: center; justify-content: center;">
+                <img src="../assets/index/banner22.png" class="hero-main-img" alt="" style="max-width: 140%; max-height: 140%; object-fit: contain; filter: drop-shadow(0 25px 45px rgba(0,0,0,0.2)); z-index: 2; transform: scale(1.3) translateY(-10px);" loading="lazy" />
+              </div>
+
+              <!-- Card 1: Female Health Leader -->
+              <div class="floating-card card-1" style="position: absolute; top: 10px; right: 10px; background: white; border-radius: 12px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 15px; z-index: 3;">
+                <div style="width: 40px; height: 40px; border-radius: 50%; background: #ffeef9; display: flex; align-items: center; justify-content: center; color: #e787da;">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div>
+                  <h6 style="margin: 0; font-size: 0.95rem; font-weight: 700; color: #2F484E; text-decoration: underline;">Predictive system</h6>
+                  <a href="#" style="font-size: 0.8rem; color: #666; text-decoration: underline;">Advanced prevention</a>
+                </div>
+                <div style="width: 22px; height: 22px; border-radius: 50%; background: #ffeef9; color: #e787da; display: flex; align-items: center; justify-content: center; margin-left: 15px;">
+                  <i class="fas fa-check" style="font-size: 0.6rem;"></i>
+                </div>
+              </div>
+
+              <!-- Card 2: Join us -->
+              <div class="floating-card card-2" style="position: absolute; top: 220px; left: 20px; background: white; border-radius: 12px; padding: 15px 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); display: flex; align-items: center; gap: 15px; z-index: 4;">
+                <div style="position: absolute; left: -25px; top: 50%; transform: translateY(-50%); background: white; padding: 8px; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                  <div style="width: 35px; height: 35px; border: 1.5px solid #e787da; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #e787da;">
+                    <i class="fas fa-user-md"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 15px;">
+                   <h6 style="margin: 0; font-size: 0.95rem; font-weight: 700; color: #2F484E; text-decoration: underline;">Telemedicine</h6>
+                   <a href="#" style="font-size: 0.8rem; color: #888; text-decoration: underline;">Gynecological and obstetric</a>
+                </div>
+              </div>
+
+              <!-- Card 3: Female Health Promoter -->
+              <div class="floating-card card-3" style="position: absolute; bottom: 20px; right: 20px; background: white; border-radius: 12px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); z-index: 2; width: 320px;">
+                <h5 style="font-size: 1.05rem; font-weight: 800; color: #2F484E; margin-bottom: 15px; text-decoration: underline;">AI Virtual Agent,</h5>
+                <div style="display: flex; gap: 15px; margin-bottom: 20px; color: #888; font-size: 0.85rem;">
+                  <span><i class="fas fa-robot me-2" style="color: #e787da;"></i>24/7 Support</span>
+                </div>
+                <div style="display: flex; gap: 10px;">
+                  <span style="background: #e6f0ff; color: #4a90e2; padding: 5px 15px; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">Artificial Intelligence</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- <section class="about-section-two style-two layout-pt-60 layout-pb-120"> -->
+      <div
+        class="bg-shape -top -right js-rellax"
+        data-rellax-speed="0"
+        data-rellax-desktop-speed="-2"
+        data-rellax-percentage="0.5"
+      ></div>
+
+      <div id="anim-scroll-container" style="position: relative; width: 100%; padding: 20px 0;">
+        <div id="anim-sticky-inner" style="position: relative; width: 100%; background: #fff; z-index: 10;">
+          
+          <!-- Primera Seccion -->
+          <section id="anim-section-1" class="steps-section w-100" style="padding: 50px 0; position: relative; display: flex; align-items: center; z-index: 2;">
+            <div class="auto-container">
+              <div class="row align-items-center justify-content-center g-4">
+                <div class="image-column col-lg-5 col-md-8 col-sm-12 text-center text-lg-end pe-lg-5">
+                  <div class="inner-column">
+                    <figure class="image" style="margin: 0;">
+                      <img src="../assets/images/home/Home 4.png" alt="" style="max-width: 320px; width: 100%; height: auto;" loading="lazy" />
+                    </figure>
+                  </div>
+                </div>
+                <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                  <div class="inner-column">
+                    <div class="sec-title -type-2">
+                      <h2 style="color: #49737e;">
+                        How to Register and Transform your Female Health
+                      </h2>
+                      <div class="text" style="font-size: 15px; margin-top: 10px;">
+                        In 3 simple steps you can access our benefits of telemedicine and comprehensive care.
+                      </div>
+                      <div class="minimal-steps">
+                        <div class="minimal-step">
+                          <div class="min-num">01</div>
+                          <div class="min-content">
+                            <h4>Register on our platform</h4>
+                          </div>
+                        </div>
+                        <div class="minimal-step">
+                          <div class="min-num">02</div>
+                          <div class="min-content">
+                            <h4>Learn with our AI agent</h4>
+                          </div>
+                        </div>
+                        <div class="minimal-step">
+                          <div class="min-num">03</div>
+                          <div class="min-content">
+                            <h4>Access telemedicine and take care of your well-being</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Segunda Seccion -->
+          <section id="anim-section-2" class="about-section-two style-two w-100" style="padding: 50px 0; position: relative; display: flex; align-items: center; z-index: 1; opacity: 1; pointer-events: auto; transform: none; background: #fff;">
+            <div class="auto-container">
+              <div class="row align-items-center justify-content-center g-4">
+                <div class="content-column mb-0 col-lg-5 col-md-12 col-sm-12 pe-lg-4">
+                  <div class="inner-column">
+                    <div class="sec-title">
+                      <h2 style="color: #49737e; font-size: 2.2rem; line-height: 1.2;">
+                        Take charge of your female health
+                      </h2>
+                      <div class="text" style="font-size: 1.05rem; line-height: 1.6;">
+                        We accompany the reduction of breast and cervical cancer in women in vulnerable communities. 
+                        We achieve this through telemedicine models, prevention programs, and strategic health education 
+                        for the women of Colombia and soon the entire region.
+                      </div>
+                    </div>
+                    <a
+                      href="https://wa.me/573106433823"
+                      class="btn-cta-premium"
+                      target="_blank"
+                    >
+                      <i class="fab fa-whatsapp"></i>
+                      Schedule an Appointment
+                    </a>
+                  </div>
+                </div>
+                <!-- Image column adjusted for better fit -->
+                <div class="image-column mb-30 md:mt-0 col-lg-6 col-md-10 col-sm-12 text-center position-relative">
+                  <figure class="image-box" style="margin: 0; display: inline-block; position: relative;">
+                    <img src="../assets/images/home/Home 5.png" alt="" style="max-width: 460px; width: 100%; height: auto; border-radius: 20px;" loading="lazy" />
+                  </figure>
+
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+      <!-- Separación entre secciones -->
+
+      <!-- Sección de Donación Yo Soy - Rediseño Premium -->
+      <section id="donation-section" class="about-section-two style-two layout-pt-40 layout-pb-40" style="position: relative; overflow: hidden; background: #fcfcfc;">
+        <!-- Capa base de fondo para asegurar que nada lo tape -->
+        <style>
+
+          .donation-wide-stripe {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.02);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            margin: 1.5rem 0;
+            display: block;
+          }
+          .donation-col {
+            padding: 2rem 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 150px;
+          }
+          .donation-col:not(:last-child) {
+            border-right: 1px solid rgba(0, 0, 0, 0.08);
+          }
+          .premium-heading {
+            color: #2F484E;
+            font-weight: 800;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+          }
+          .premium-text {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555555;
+            margin: 0;
+          }
+          .vaki-btn-premium {
+            background: #e787da;
+            color: #ffffff !important;
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 1.05rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 8px 20px rgba(231,135,218,0.25);
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none !important;
+            margin-top: 1rem;
+          }
+          .vaki-btn-premium:hover {
+            transform: scale(1.05) translateY(-3px);
+            box-shadow: 0 15px 35px rgba(231, 135, 218, 0.5);
+          }
+          @media (max-width: 991px) {
+            .donation-col {
+              padding: 2rem;
+              text-align: center;
+            }
+            .donation-col:not(:last-child) {
+              border-right: none;
+              border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .donation-wide-stripe {
+              padding: 2rem 0;
+            }
+          }
+
+          /* --- ESTILOS LOGOS ALIADOS/SPONSORS --- */
+          .carousel-inner, .carousel-item {
+            overflow: visible !important;
+          }
+          .partner-logo-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 20px;
+            transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 160px;
+            border: 1.5px solid rgba(231, 135, 218, 0.15);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+          }
+          .partner-logo-box:hover {
+            box-shadow: 0 15px 40px rgba(231, 135, 218, 0.15);
+            transform: translateY(-8px);
+            border-color: rgba(231,135,218,0.3);
+          }
+          .partner-logo {
+            max-height: 100px;
+            max-width: 90%;
+            width: auto;
+            transition: all 0.4s ease;
+          }
+          .partner-logo-box:hover .partner-logo {
+            transform: scale(1.15);
+          }
+          
+          /* --- TICKER CONTINUO PARA ALIADOS --- */
+          .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            padding: 20px 0;
+            position: relative;
+          }
+          .ticker-content {
+            display: flex;
+            width: fit-content;
+            animation: ticker 40s linear infinite;
+          }
+          .ticker-content:hover {
+            animation-play-state: paused;
+          }
+          .ticker-item {
+            flex-shrink: 0;
+            padding: 0 15px;
+            width: 240px; /* Ajuste para que quepan bien */
+          }
+          
+          @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .sponsors-box {
+            background: #fbfbfb;
+            height: 180px;
+            border-radius: 40px;
+            border: 2px solid rgba(231,135,218,0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+          }
+          .sponsors-box .partner-logo {
+            filter: none;
+            opacity: 1;
+            max-height: 110px;
+          }
+          /* --- NUEVOS ESTILOS SECCIÓN PREMIOS PREMIUM --- */
+          .award-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(231, 135, 218, 0.2);
+            border-radius: 24px !important;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+          }
+          .award-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(231, 135, 218, 0.15);
+            border-color: #e787da;
+          }
+          .award-image-container {
+            width: 100%;
+            height: 220px;
+            overflow: hidden;
+            position: relative;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .award-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+          }
+          .award-card:hover .award-image-container img {
+            transform: scale(1.05);
+          }
+          .award-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #e787da;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 2;
+          }
+          .award-content {
+            padding: 0.8rem 1rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+          }
+          .award-title {
+            color: #2F484E;
+            font-size: 1rem;
+            font-weight: 800;
+            margin-bottom: 0.3rem;
+            line-height: 1.2;
+          }
+          .award-desc {
+            color: #555;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+          }
+          .award-footer {
+            margin-top: auto;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            font-size: 0.8rem;
+            color: #888;
+            font-style: italic;
+          }
+
+          @media (max-width: 575px) {
+            .award-image-container { height: 140px; }
+            .award-title { font-size: 0.85rem; }
+            .award-desc { font-size: 0.7rem; }
+            .award-footer { font-size: 0.65rem; padding-top: 0.5rem; }
+            .award-content { padding: 0.6rem; }
+            .award-badge { font-size: 0.55rem; padding: 2px 8px; }
+          }
+          .premios-carousel-control {
+            width: 50px !important;
+            height: 50px !important;
+            background: #2F484E !important;
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            margin: 0 -25px;
+          }
+          .premios-carousel-control:hover {
+            opacity: 1;
+            background: #e787da !important;
+            transform: translateY(-50%) scale(1.1);
+          }
+        </style>
+
+        <div class="container px-4 px-lg-5" style="position: relative; z-index: 2;">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center">
+              <div class="sec-title mb-3" id="donation-sec-title">
+                <h2 style="color: #2F484E; font-weight: 800; font-size: 2rem; margin-bottom: 1rem; line-height: 1.2;">
+                  Join us in transforming <span style="color: #e787da;">lives</span> with Yo Soy
+                </h2>
+                <div class="text" style="font-size: 1.1rem; color: #555555; max-width: 850px; margin: 0 auto;">
+                  At <b>Yo Soy</b>, we believe in the power of solidarity and training to open paths of real opportunities.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="donation-wide-stripe">
+          <div class="container-fluid px-0">
+            <div class="row g-0 align-items-stretch">
+              <!-- Column 1 -->
+              <div class="col-lg-4 donation-col">
+                <p class="premium-text" style="max-width: 450px;">
+                  Today we invite you to be part of a cause that changes stories: <b style="color: #e787da;">supporting women in situations of vulnerability</b>, providing them with access to training, tools, and support.
+                </p>
+              </div>
+              
+              <!-- Column 2 -->
+              <div class="col-lg-4 donation-col" style="background: rgba(0, 0, 0, 0.01);">
+                <h3 class="premium-heading">Your contribution matters</h3>
+                <p class="premium-text" style="max-width: 450px;">
+                  Every donation is an opportunity: a woman who accesses education, a story that is resignified, a family that is empowered.
+                </p>
+              </div>
+
+              <!-- Column 3 -->
+              <div class="col-lg-4 donation-col">
+                <h4 class="premium-heading">Goal 2026</h4>
+                <p class="premium-text" style="max-width: 450px;">
+                  Guide <b style="color: #e787da;">4,500 women</b> who do not have access to health or belong to the subsidized regime through our virtual agent.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container px-4 px-lg-5">
+          <div class="row justify-content-center">
+            <div class="col-12 text-center" style="position: relative; z-index: 2;">
+              <div>
+                <a href="https://vaki.co/es/vaki/JFDkQ4AatAgsACAHIGsC?utm_source=copy&utm_medium=toolbar&utm_campaign=v4" target="_blank" class="vaki-btn-premium">
+                  Support our Vaki
+                </a>
+                <p style="color: #777777; font-size: 1.1rem; margin-top: 1.5rem; font-style: italic; font-weight: 500;">
+                  "Because when one woman advances, we all advance."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container mb-5"></div>
+
+      <!-- App Section -->
+      <!-- <section class="app-section">
+              <div class="auto-container">
+                <div class="row justify-content-between align-items-center"> -->
+      <!-- </section> -->
+          <!-- SECCION STICKY SCROLL EXTRA (Premios, Podcast, Aliados, Sponsors) -->
+      <div id="extra-scroll-container" style="position: relative; width: 100%;">
+        <div id="extra-sticky-inner" style="position: relative; width: 100%; background: #fff; z-index: 9;">
+          
+          <!-- Seccion 1: Reconocimientos -->
+          <div id="extra-sec-1" style="padding: 100px 0; position: relative; width: 100%; display: flex; align-items: center; z-index: 4;">
+            <div class="auto-container">
+              <div class="sec-title text-center mb-3">
+                <h2 style="color: #2F484E; font-weight: 800; font-size: 1.7rem; margin-bottom: 0.5rem;">Our Recognitions</h2>
+                <div class="text" style="color: #666; font-size: 0.95rem; max-width: 550px; margin: 0 auto; line-height: 1.5;">
+                  Proud to be part of initiatives that drive female leadership and social innovation.
+                </div>
+              </div>
+
+              <div id="premiosCarousel" class="carousel slide" data-bs-ride="carousel">
+                <!-- Indicators -->
+                <div class="carousel-indicators" style="bottom: -50px;">
+                  <button type="button" data-bs-target="#premiosCarousel" data-bs-slide-to="0" class="active" aria-current="true" style="background-color: #e787da; width: 12px; height: 12px; border-radius: 50%;"></button>
+                  <button type="button" data-bs-target="#premiosCarousel" data-bs-slide-to="1" style="background-color: #e787da; width: 12px; height: 12px; border-radius: 50%;"></button>
+                  <button type="button" data-bs-target="#premiosCarousel" data-bs-slide-to="2" style="background-color: #e787da; width: 12px; height: 12px; border-radius: 50%;"></button>
+                </div>
+
+                <div class="carousel-inner">
+                  <!-- Slide 1 -->
+                  <div class="carousel-item active">
+                    <div class="row g-4">
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Award</span>
+                          <div class="award-image-container"><img src="../assets/images/home/CCB.jpeg" alt="Mujeres Tech CCB" loading="lazy" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">Winners of Mujeres Tech CCB</h4>
+                            <p class="award-desc">International recognition from ERA New York for our strategic approach.</p>
+                            <div class="award-footer">CCB · Dec 2023</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Impact</span>
+                          <div class="award-image-container"><img src="../assets/images/home/empodera.jpeg" alt="Empodera" loading="lazy" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">Start Path Empodera</h4>
+                            <p class="award-desc">Strategic alliance with MasterCard and USAID to support female entrepreneurs.</p>
+                            <div class="award-footer">USAID · Jul 2022</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Inclusion</span>
+                          <div class="award-image-container"><img src="../assets/images/home/E-trade.jpeg" alt="eTrade" loading="lazy" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">eTrade for All</h4>
+                            <p class="award-desc">Driving more inclusive and sustainable economies throughout the region.</p>
+                            <div class="award-footer">E-Trade All</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="carousel-item">
+                    <div class="row g-4">
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Academic</span>
+                          <div class="award-image-container" style="background: #f8f9fa;"><img src="../assets/images/home/awe.png" alt="AWE" style="object-fit: contain; padding: 15px;" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">AWE Academy</h4>
+                            <p class="award-desc">High-level training backed by the U.S. Embassy.</p>
+                            <div class="award-footer">AWE Academy</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Global</span>
+                          <div class="award-image-container" style="background: #f8f9fa;"><img src="../assets/images/home/asu.png" alt="ASU" style="object-fit: contain; padding: 15px;" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">Arizona University</h4>
+                            <p class="award-desc">Alliance for innovation and international training in comprehensive health.</p>
+                            <div class="award-footer">ASU University</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Vision</span>
+                          <div class="award-image-container"><img src="../assets/images/home/hzero.jpeg" alt="HZero" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">HZero - EnRumbo</h4>
+                            <p class="award-desc">We accelerate the psychosocial impact for vulnerable women.</p>
+                            <div class="award-footer">HZero Impact</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="carousel-item">
+                    <div class="row g-4 justify-content-center">
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Impact</span>
+                          <div class="award-image-container"><img src="../assets/images/home/sheis.jpeg" alt="She Is" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">She Is Global Forum</h4>
+                            <p class="award-desc">Recognition for the economic empowerment of women in Colombia.</p>
+                            <div class="award-footer">She Is · Nov 2024</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6 col-lg-4">
+                        <div class="award-card">
+                          <span class="award-badge">Equity</span>
+                          <div class="award-image-container"><img src="../assets/images/home/el-poder-de-equidad (1).jpeg" alt="Equidad" /></div>
+                          <div class="award-content">
+                            <h4 class="award-title">The Power of Equity</h4>
+                            <p class="award-desc">Distinction for promoting equal opportunities in female health.</p>
+                            <div class="award-footer">Equity Award</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Controls -->
+                <button class="carousel-control-prev premios-carousel-control" type="button" data-bs-target="#premiosCarousel" data-bs-slide="prev" style="left: -80px;">
+                  <span class="carousel-control-prev-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                </button>
+                <button class="carousel-control-next premios-carousel-control" type="button" data-bs-target="#premiosCarousel" data-bs-slide="next" style="right: -80px;">
+                  <span class="carousel-control-next-icon" aria-hidden="true" style="filter: invert(1);"></span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seccion 2: Podcast -->
+          <div id="extra-sec-2" style="padding: 100px 0; position: relative; width: 100%; display: flex; align-items: center; z-index: 3; opacity: 1; pointer-events: auto; transform: none;">
+             <div class="auto-container">
+              <div class="row align-items-center">
+                <div class="col-lg-5">
+                  <h2 style="color: #2F484E; font-weight: 800; font-size: 2.22rem; line-height: 1.2;">Listen to Our <br><span style="color: #e787da;">Podcast</span></h2>
+                  <p class="mt-4" style="font-size: 1.2rem; color: #555; line-height: 1.6;">Dive into inspiring conversations about leadership, female health, and social impact.</p>
+                  <a href="https://open.spotify.com/show/2vE4V0O8V1A2Z3G4H5I6J7" target="_blank" class="mt-4 d-inline-flex align-items-center btn-cta-premium" style="text-decoration: none; padding: 12px 25px;">
+                    <div style="width: 32px; height: 32px; background: #FFF; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 12px;">
+                      <i class="fab fa-spotify" style="color: #1DB954; font-size: 1.1rem;"></i>
+                    </div>
+                    <span style="font-weight: 700;">Listen on Spotify</span>
+                  </a>
+                </div>
+                <div class="col-lg-7">
+                  <div style="background: white; padding: 20px; border-radius: 35px; box-shadow: 0 25px 50px rgba(0,0,0,0.12); border: 1px solid rgba(231,135,218,0.1);">
+                    <iframe src="https://open.spotify.com/embed/episode/3M4dNOmI22tFJKJHWVy71N" width="100%" height="232" frameborder="0" allow="encrypted-media" style="border-radius: 25px;"></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+          <!-- Seccion 3: Aliados -->
+          <div id="extra-sec-3" style="padding: 100px 0; position: relative; width: 100%; display: flex; align-items: center; z-index: 2; opacity: 1; pointer-events: auto; transform: none;">
+            <div class="auto-container">
+              <h2 class="text-center mb-5" style="color: #2F484E; font-weight: 800; font-size: 2.22rem;">Our Strategic Allies</h2>
+              <div class="ticker-wrap">
+                <div class="ticker-content">
+                  <!-- Logos Set 1 -->
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/tiempoDeJuegoSinFondo.png" class="partner-logo" alt="Tiempo de Juego" loading="lazy" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoSoyOportunidad.png" class="partner-logo" alt="Soy Oportunidad" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoFpvV2.png" class="partner-logo" alt="FPV" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoSisma.png" class="partner-logo" alt="Sisma Mujer" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoFundacionAccionInterna.png" class="partner-logo" alt="Fundación Acción Interna" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/cirecLogoColorNegroVertical.png" class="partner-logo" alt="CIREC" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoFundacionHuellas.png" class="partner-logo" alt="Fundación Huellas" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoCasaKarah.jpeg" class="partner-logo" alt="Casa Karah" /></div></div>
+                  
+                  <!-- Duplicate Set for recursion -->
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/tiempoDeJuegoSinFondo.png" class="partner-logo" alt="Tiempo de Juego" loading="lazy" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoSoyOportunidad.png" class="partner-logo" alt="Soy Oportunidad" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoFpvV2.png" class="partner-logo" alt="FPV" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoSisma.png" class="partner-logo" alt="Sisma Mujer" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoFundacionAccionInterna.png" class="partner-logo" alt="Fundación Acción Interna" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/cirecLogoColorNegroVertical.png" class="partner-logo" alt="CIREC" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoFundacionHuellas.png" class="partner-logo" alt="Fundación Huellas" /></div></div>
+                  <div class="ticker-item"><div class="partner-logo-box"><img src="../assets/images/home/aliados/logoCasaKarah.jpeg" class="partner-logo" alt="Casa Karah" /></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Seccion 4: Sponsors -->
+          <div id="extra-sec-4" style="padding: 100px 0; position: relative; width: 100%; display: flex; align-items: center; z-index: 1; opacity: 1; pointer-events: auto; transform: none;">
+            <div class="auto-container text-center">
+              <h2 class="mb-5" style="color: #2F484E; font-weight: 800; font-size: 2.22rem;">Our Partners</h2>
+              <div class="row justify-content-center g-5">
+                <div class="col-md-4"><div class="partner-logo-box sponsors-box"><img src="../assets/images/tumy.png" class="partner-logo" alt="TumiPay" /></div></div>
+                <div class="col-md-4"><div class="partner-logo-box sponsors-box"><img src="../assets/images/home/aliados/cruz-verde.png" class="partner-logo" alt="Cruz Verde" /></div></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+         </div>
+
+        <!-- aca va la publicacion del instagram -->
+      </div>
+
+      <section class="about-section style-two layout-pt-80 layout-pb-80">
+        <div class="container">
+          <div class="row justify-content-center mb-5">
+            <div class="col-12 text-center">
+              <h2 style="color: #2F484E; font-weight: 800; font-size: 2.5rem; line-height: 1.2;">
+                How to be Part of Yo Soy?
+              </h2>
+              <p class="mt-3" style="font-size: 1.2rem; color: #666; font-weight: 500;">
+                Follow our Practical Guide to complete your registration easily.
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center align-items-center g-4">
+            <!-- Image Column -->
+            <div class="col-lg-5 col-md-10 text-center">
+                <img
+                  src="../assets/index/video.png"
+                  alt="Registro Yo Soy"
+                  style="max-width: 380px; width: 100%; height: auto;"
+                  loading="lazy"
+                />
+            </div>
+            <!-- Video Column -->
+            <div class="col-lg-7 col-md-11">
+              <div class="ratio ratio-16x9" style="border-radius: 30px; overflow: hidden; border: 4px solid white;">
+                <video
+                  controls
+                  class="w-100 h-100"
+                  style="object-fit: cover; background: #000;"
+                  preload="metadata"
+                >
+                  <source src="../assets/images/home/video.mp4" type="video/mp4" />
+                  Your browser does not support the video.
+                </video>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <br /><br /><br />
+
+      <!-- ...existing code... -->
+      <footer class="premium-footer">
+        <div class="auto-container">
+          <div class="row align-items-center">
+            <!-- Columna 1: Marca y Descripción -->
+            <div class="col-lg-7 col-md-6 mb-4 mb-md-0">
+              <div class="footer-logo mb-3">
+                <img src="../assets/images/logo.png" alt="YoSoy Logo" style="max-height: 38px; filter: brightness(0) invert(1);" />
+              </div>
+              <p style="line-height: 1.7; color: rgba(224, 242, 241, 0.8); margin-bottom: 0; font-size: 1.05rem; max-width: 550px;">
+                We help lower breast and cervical cancer rates in vulnerable populations in Colombia and soon Latam, through prevention, telemedicine, and access to female health education.
+              </p>
+            </div>
+            
+            <!-- Columna 2: Redes Sociales y Contacto -->
+            <div class="col-lg-5 col-md-6 text-md-end">
+              <div class="footer-socials mb-3">
+                <a href="https://wa.me/573106433823" class="social-circle" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/yosoy.ml/" class="social-circle" title="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/company/yosoyml/" class="social-circle" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.tiktok.com/@yosoy.co" class="social-circle" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://www.facebook.com/yo.soy.oportunidades" class="social-circle" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+              </div>
+              <div style="font-size: 0.95rem; color: rgba(224, 242, 241, 0.6);">
+                <div class="mb-1"><i class="fas fa-envelope me-2" style="color: #e787da;"></i> salud.femenina@yo-soy.co</div>
+                <div class="mb-1"><i class="fas fa-phone me-2" style="color: #e787da;"></i> +57 310 6433823</div>
+                <div><i class="fas fa-map-marker-alt me-2" style="color: #e787da;"></i> Bogotá, Colombia</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Bar -->
+          <div class="footer-bottom-v3 text-center">
+            <div class="row align-items-center">
+              <div class="col-md-12">
+                <p class="mb-0">© 2026 <span style="color: #e787da; font-weight: 700;">Yo Soy</span>. All rights reserved. | Breaking taboos and healing minds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- ...existing code... -->
+      <!-- End Main Footer -->
+    </div>
+    <!-- End Page Wrapper -->
+
+    <div id="ysFestOverlay">
+      <div id="ysFestCard">
+        <button id="ysFestClose" onclick="document.getElementById('ysFestOverlay').style.display='none'" aria-label="Close">&times;</button>
+        <div id="ysFestLeft">
+          <p id="ysFestEyebrow">&#9679; SPECIAL EVENT</p>
+          <!-- <p id="ysFestLogo">yo&#10003;soy</p> -->
+          <h2 id="ysFestTitle">FEST TRANSFORMING <span>WOMEN'S HEALTH</span></h2>
+          <p id="ysFestDesc">Experimental festival to visualize the improvement of female health.</p>
+          <p id="ysFestInfo">&#128205; Bogotá, Colombia &nbsp;&nbsp; &#128197; Saturday, April 25 &nbsp;&nbsp; &#128336; 1:00 PM &#8211; 8:00 PM</p>
+          <a href="https://fest.yo-soy.co" target="_blank" id="ysFestBtn">View event</a>
+          <button onclick="document.getElementById('ysFestOverlay').style.display='none'" id="ysFestSkip">Maybe later</button>
+        </div>
+        <div id="ysFestRight">
+          <img src="../assets/images/artista.png" alt="Yo Soy Fest" id="ysFestImg" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Language Switcher -->
+    <div class="language-switcher-v3">
+      <div class="lang-selector-premium">
+        <button class="lang-option-v2" onclick="changeLang('es')">ES</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-option-v2" onclick="changeLang('en')">EN</button>
+      </div>
+    </div>
+
+    
+    
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" defer></script>
+    <script src="../assets/js/script.js" defer></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("main-header");
+        const navLinks = document.querySelectorAll(".nav-link-v2");
+
+        // Header scroll effect
+        function handleScroll() {
+          if (!header) return;
+          if (window.scrollY > 50) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        // Initialize on load (solo si los elementos existen)
+        if (header) handleScroll();
+
+        // Debugging para el logo
+        const logoImages = document.querySelectorAll('img[src*="logo.png"]');
+        logoImages.forEach((img, index) => {
+          console.log(`Logo ${index + 1}:`, img.src);
+          img.addEventListener("load", function () {
+            console.log(`✅ Logo ${index + 1} cargado exitosamente`);
+          });
+          img.addEventListener("error", function () {
+            console.error(`❌ Error cargando logo ${index + 1}:`, img.src);
+          });
+        });
+
+        // Footer link hover effects
+        document
+          .querySelectorAll(".footer-links a, .footer-services a")
+          .forEach((link) => {
+            link.addEventListener("mouseenter", function () {
+              this.style.transform = "translateX(10px)";
+            });
+
+            link.addEventListener("mouseleave", function () {
+              this.style.transform = "translateX(0)";
+            });
+          });
+
+        // Social links hover effects
+        document.querySelectorAll(".social-links a").forEach((link) => {
+          link.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-3px) scale(1.1)";
+          });
+
+          link.addEventListener("mouseleave", function () {
+            this.style.transform = "translateY(0) scale(1)";
+          });
+        });
+
+        // Mostrar overlay Yo Soy Fest
+        setTimeout(function() {
+          document.getElementById('ysFestOverlay').style.display = 'flex';
+        }, 800);
+      }); // End DOMContentLoaded
+
+      // --- LANGUAGE SWITCHER UI LOGIC ---
+      function changeLang(langCode) {
+        localStorage.setItem('selectedLanguage', langCode);
+        if (langCode === 'es') {
+          window.location.href = '../' + (window.location.pathname.split('/').pop() || 'index.html');
+        } else {
+          console.log("Already in English.");
+        }
+      }
+    </script>
+  </body>
+</html>
