@@ -1,11 +1,12 @@
 FROM nginx:alpine
 
-# Cambiamos la configuración interna de Nginx de 80 a 8080
-RUN sed -i 's/listen\.+80;/listen 8080;/g' /etc/nginx/conf.d/default.conf
+# Reemplaza el puerto 80 por el 8080 en la configuración por defecto de Nginx
+RUN sed -i 's/listen       80;/listen 8080;/g' /etc/nginx/conf.d/default.conf
 
+# Copia los archivos de tu web
 COPY . /usr/share/nginx/html
 
-# Exponemos el puerto que Cloud Run quiere ver
+# Informa que ahora usamos el puerto 8080
 EXPOSE 8080
 
 CMD ["nginx", "-g", "daemon off;"]
