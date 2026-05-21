@@ -2077,54 +2077,6 @@
     </div>
     <!-- End Page Wrapper -->
 
-    <!-- Overlay Yo Soy Fest -->
-    <div id="ysFestOverlay">
-      <div id="ysFestCard">
-        <button
-          id="ysFestClose"
-          onclick="
-            document.getElementById('ysFestOverlay').style.display = 'none'
-          "
-          aria-label="Cerrar"
-        >
-          &times;
-        </button>
-        <div id="ysFestLeft">
-          <p id="ysFestEyebrow">&#9679; EVENTO ESPECIAL</p>
-          <!-- <p id="ysFestLogo">yo&#10003;soy</p> -->
-          <h2 id="ysFestTitle">
-            FEST TRANSFORMANDO LA <span>SALUD FEMENINA</span>
-          </h2>
-          <p id="ysFestDesc">
-            Festival experiencial para visibilizar el mejoramiento de la salud
-            femenina.
-          </p>
-          <p id="ysFestInfo">
-            &#128205; Bogot&#225;, Colombia &nbsp;&nbsp; &#128197; S&#225;bado
-            25 de Abril &nbsp;&nbsp; &#128336; 1:00 PM &#8211; 8:00 PM
-          </p>
-          <a href="https://fest.yo-soy.co/" target="_blank" id="ysFestBtn"
-            >Ver evento</a
-          >
-          <button
-            onclick="
-              document.getElementById('ysFestOverlay').style.display = 'none'
-            "
-            id="ysFestSkip"
-          >
-            Tal vez despu&#233;s
-          </button>
-        </div>
-        <div id="ysFestRight">
-          <img
-            src="assets/images/artista.png"
-            alt="Yo Soy Fest"
-            id="ysFestImg"
-          />
-        </div>
-      </div>
-    </div>
-
     <!-- Floating Language Switcher -->
     <div class="language-switcher-v3">
       <div class="lang-selector-premium">
@@ -2201,11 +2153,6 @@
             this.style.transform = "translateY(0) scale(1)";
           });
         });
-
-        // Mostrar overlay Yo Soy Fest
-        setTimeout(function () {
-          document.getElementById("ysFestOverlay").style.display = "flex";
-        }, 800);
       }); // End DOMContentLoaded
 
       // --- LANGUAGE SWITCHER UI LOGIC ---
